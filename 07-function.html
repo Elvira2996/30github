@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Function</title>
+
+</head>
+
+<body>
+
+ <button id = 'addButton' onclick="addNewButton()">Add New Button</button>
+  
+  <script>
+function addNewButton(){
+  const newButton = document.createElement('button');
+  newButton.textContent = "I am a new button"
+  newButton.onclick = () =>
+  alert('You clicked me')
+  newButton.onclick = function () {
+    newButton.remove();
+  };
+  document.body.appendChild(newButton);
+
+}
+
+const originalObject = {
+  key1: 'value1',
+  key2:'value2'
+};
+
+const copiedObject = {originalObject};
+
+copiedObject.key1 = "newValue1";
+copiedObject.key2 = 'newValue2';
+console.log('original Object:',originalObject);
+console.log('Copied Object:', copiedObject);
+  </script>
+</body>
+
+</html>

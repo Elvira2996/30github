@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Booleans</title>
+
+</head>
+
+<body>
+
+  <div id="image-container"></div>
+  
+  <script>
+//  console.log(true && false);
+// console.log(0.2 >= 0 && 0.2 < 1/3);
+
+// console.log(true || false);
+// console.log();
+
+
+/*true
+false
+console.log(3<5);
+
+if(true){
+  console.log('hello');
+} else{
+  console.log('else');
+}
+
+const age = 15; 
+if(age >= 16){
+  console.log('You can drive')
+  console.log('Congrats!')
+}else if(age>=14){
+  console.log('Almost there!')
+}else{
+  console.log('You cant drive ')
+} */
+/*if (0) {
+  console.log('truthy');
+}
+const cartQuantity = 5;
+if (cartQuantity) {
+  console.log('cart has products');
+}
+console.log(!0);
+console.log('text' / 5);
+const variable1 = underfined;
+console.log(variable1);
+
+
+/ Ternary Operator?:/
+true ? 'trythy' : 'falsy'
+//shortcut
+if (true){
+'truthy'} else{
+'falsy'}*/
+
+// const result = 0? 'truthy': 'falsy';
+// console.log(result);
+
+/* Guard Operator &&
+false && console.log('hello');
+
+shortcut
+if (condition){
+console.log('hello');
+}
+
+const message = false && 'hello';
+console.log(message);
+
+
+const currency = 'eur' || 'usd';
+console.log(currency);*/
+
+const container = document.getElementById('image-container');
+const img = document.createElement('img');
+img.src = 'https://yt3.ggpht.com/a/AATXAJybhxM_pP-RMZ3CEXpmoRTAV6b1w3R0NPL7ZxLq=s900-c-k-c0xffffffff-no-rj-mo';
+img.width = 150;
+
+container.appendChild(img);
+
+
+
+const numberDicer = Math.random();
+let moveDicer = '';
+
+  
+if (numberDicer >= 0 && numberDicer < 1/6){
+  moveDicer = '1';
+  img.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Dice-1.svg/640px-Dice-1.svg.png'
+} else if (numberDicer >= 1/6 && numberDicer < 2/6){
+  moveDicer = '2';
+  img.src = 'https://lumpics.ru/wp-content/uploads/2016/08/Risuem-tochki-s-pomoshhyu-kisti-v-Fotoshope.png'
+} else if (numberDicer >= 2/6 && numberDicer < 3/6){
+  moveDicer = '3';
+  img.src = 'https://i.pinimg.com/736x/54/b1/0f/54b10f7efbfc503173aa948686e6746f.jpg'
+} else if (numberDicer >= 3/6 && numberDicer < 4/6){
+  moveDicer = '4';
+  img.src = 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Dice-4.png'
+} else if (numberDicer >= 4/6 && numberDicer < 5/6){
+  moveDicer = '5';
+  img.src = 'https://www.clipartbest.com/cliparts/4cb/oRd/4cboRdRki.gif'
+} else if (numberDicer >= 5/6 && numberDicer < 1){
+  moveDicer = '6';
+  img.src = 'https://cdn3.iconfinder.com/data/icons/dice-3/88/Dice_6-512.png'
+}
+
+
+
+console.log(numberDicer);
+console.log(moveDicer);
+
+
+
+  </script>
+</body>
+
+</html>

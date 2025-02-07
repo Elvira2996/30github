@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Coin</title>
+
+</head>
+
+<body>
+  <div id="face1"></div>
+  <div id="face2"></div>
+
+  <script>
+    const coin = Math.random();  // Случайное число
+    let numberCoin = '';
+
+    if (coin >= 0 && coin < 0.5) {
+      numberCoin = 'face1';  // Если число меньше 0.5, показываем face1
+    } else if (coin >= 0.5 && coin < 1) {
+      numberCoin = 'face2';  // Если число от 0.5 до 1, показываем face2
+    }
+
+    console.log(coin);  // Выводим значение coin
+
+    let container1 = document.getElementById('face1');
+    let img1 = document.createElement('img');
+    img1.src = 'https://cdn2.iconfinder.com/data/icons/large-shop-icons/512/Dollar_coin_money_cash_investment.png';
+    container1.appendChild(img1);
+
+    let container2 = document.getElementById('face2');
+    let img2 = document.createElement('img');
+    img2.src = 'https://i.ebayimg.com/images/g/Ou4AAOSwie5XTb58/s-l500.jpg';
+    container2.appendChild(img2);
+
+    // Показываем только одну сторону монеты в зависимости от значения coin
+    if (numberCoin === 'face1') {
+      container2.style.display = 'none';  // Скрываем вторую сторону
+    } else if (numberCoin === 'face2') {
+      container1.style.display = 'none';  // Скрываем первую сторону
+    }
+  </script>
+</body>
+
+
+</html>
